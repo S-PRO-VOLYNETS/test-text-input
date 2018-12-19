@@ -34,11 +34,11 @@ export default class App extends Component<Props> {
           ref={ref => this._textInput = ref}
           onChangeText={()=>{
             
-            setTimeout(() => {
-              this.setState({ value: "TEST" });
-            },5);
+            // setTimeout(() => {
+            //   this._textInput.setNativeProps({ text: 'TEST' });
+            // },5);
             console.log("I am work");
-            // this.setState({ value: "TEST" });
+            this.setState({ value: "TEST" });
           }}
         />
       </View>
