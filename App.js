@@ -31,9 +31,14 @@ export default class App extends Component<Props> {
         <TextInput
           style={{borderWidth: 1}}
           value={this.state.value}
+          ref={ref => this._textInput = ref}
           onChangeText={()=>{
+            
+            setTimeout(() => {
+              this.setState({ value: "TEST" });
+            },5);
             console.log("I am work");
-            this.setState({ value: "TEST" });
+            // this.setState({ value: "TEST" });
           }}
         />
       </View>
